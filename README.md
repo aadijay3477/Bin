@@ -1,2 +1,2 @@
 # Bin
-whattosay
+Test
