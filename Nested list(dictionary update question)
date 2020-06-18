@@ -1,0 +1,21 @@
+problem statement:
+<a hrefhttps://hackerrank-challenge-pdfs.s3.amazonaws.com/1375-nested-list-English?AWSAccessKeyId=AKIAJ4WZFDFQTZRGO3QA&Expires=1592479901&Signature=wOUL5eHu1a0YjRMKlrljpv8l48Q%3D&response-content-disposition=inline%3B%20filename%3Dnested-list-English.pdf&response-content-type=application%2Fpdf /a>
+
+D={}
+l=[]
+if __name__ == '__main__':
+        for _ in range(int(input())):
+                name = input()
+                score = float(input())
+                D.update([(name,score)])
+m=min(D.values())
+for k in D.copy():
+        if D[k] == m:
+                del D[k]
+m=min(D.values())
+for k in D.copy():
+        if D[k] == m:
+                l.append(k)
+l.sort()
+for i in l:
+        print(i)
