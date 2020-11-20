@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int conv(int n,int b1,int b2){
+    int k=0,r=0,d;
+    while(n!=0){
+        d=n%10;
+        r+=d*pow(b1,k);
+        n/=10;
+        k++;
+    }
+    n=r;k=1;r=0;
+    while(n!=0)
+    {
+        d=n%b2;
+        r+=k*d;
+        n/=b2;
+        k=k*10;
+    }
+    return r;
+}
+
+int main(){
+    int n,b1,b2;
+    cin >>n>>b1>>b2;
+    cout<<conv(n,b1,b2);
+    return 0;
+}
